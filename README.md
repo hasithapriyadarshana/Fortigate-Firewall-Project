@@ -1,7 +1,4 @@
-# FortiGate Firewall Configuration Project — Completed
-
-**Project Status:** Completed
-
+# FortiGate Firewall Configuration Project 
 ## Project Overview
 
 This project demonstrates the configuration and administration of a FortiGate firewall using GNS3.
@@ -17,6 +14,8 @@ The lab topology includes a FortiGate firewall connected to a Cloud network, two
 - **Routers:** R1 and R2
 - **Switches:** Switch1 and Switch2
 - **End Devices:** PC1, PC2, PC3, and PC4
+<img width="687" height="647" alt="Topology" src="https://github.com/user-attachments/assets/639da085-d1fe-4740-aae5-2eca1237533f" />
+
 
 ## Completed Project Tasks
 
@@ -83,4 +82,3 @@ Created and tested firewall policies for:
 
 This project provided practical experience with FortiGate firewall administration, network interface configuration, DHCP, static routing, IPv4 firewall policies, traffic monitoring, logging, security profiles, and configuration backup and restoration.
 
-**Project Status: Completed**
