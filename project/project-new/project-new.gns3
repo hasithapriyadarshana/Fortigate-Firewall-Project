@@ -10,7 +10,7 @@
     "scene_height": 1000,
     "scene_width": 2000,
     "show_grid": false,
-    "show_interface_labels": true,
+    "show_interface_labels": false,
     "show_layers": false,
     "snap_to_grid": false,
     "supplier": null,
@@ -53,6 +53,42 @@
                     }
                 ],
                 "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "980dd712-159d-4792-a8a1-66beb8318414",
+                "link_style": {
+                    "color": "#000000",
+                    "type": 1,
+                    "width": 2
+                },
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": 25,
+                            "y": -9
+                        },
+                        "node_id": "4b5c08b8-bc59-455c-9c1c-e2abf050c403",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "Port2",
+                            "x": 42,
+                            "y": 64
+                        },
+                        "node_id": "d6eb9728-34a1-4459-a68f-e1745255cdc5",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
             }
         ],
         "nodes": [
@@ -67,12 +103,12 @@
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "FortiGateFortigate-New-1",
-                    "x": -59,
-                    "y": 60
+                    "text": "Fortigate-Firewall",
+                    "x": -25,
+                    "y": 55
                 },
                 "locked": false,
-                "name": "FortiGateFortigate-New-1",
+                "name": "Fortigate-Firewall",
                 "node_id": "d6eb9728-34a1-4459-a68f-e1745255cdc5",
                 "node_type": "qemu",
                 "port_name_format": "Port{port1}",
@@ -92,7 +128,7 @@
                     "hda_disk_image_md5sum": "0aee912ab11bf9a4b0e3fc1a62dd0e40",
                     "hda_disk_interface": "virtio",
                     "hdb_disk_image": "empty30G.qcow2",
-                    "hdb_disk_image_md5sum": "82309b9ac02616ce7407733a92e4b839",
+                    "hdb_disk_image_md5sum": "3411a599e822f2ac6be560a26405821a",
                     "hdb_disk_interface": "virtio",
                     "hdc_disk_image": "",
                     "hdc_disk_image_md5sum": null,
@@ -122,8 +158,8 @@
                 "symbol": "fortinet.svg",
                 "template_id": "fef9c58c-4cef-4826-bf3c-121e21311313",
                 "width": 70,
-                "x": -528,
-                "y": -112,
+                "x": -527,
+                "y": -111,
                 "z": 1
             },
             {
@@ -199,6 +235,35 @@
                 "width": 159,
                 "x": -574,
                 "y": -247,
+                "z": 1
+            },
+            {
+                "compute_id": "vm",
+                "console": 5002,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "PC1",
+                    "x": 15,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "PC1",
+                "node_id": "4b5c08b8-bc59-455c-9c1c-e2abf050c403",
+                "node_type": "vpcs",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {},
+                "symbol": ":/symbols/vpcs_guest.svg",
+                "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
+                "width": 65,
+                "x": -481,
+                "y": 121,
                 "z": 1
             }
         ]

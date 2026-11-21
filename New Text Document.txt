@@ -1,0 +1,10 @@
+1.chnage host name of the firewall, change the time zone, try the theme colurs, setup idle time time out
+2. setting up interfaces of the firewall and setup dhcp service
+3 setting the static routes 
+4.setup ipv4 firewall policys
+5.check fortiview
+6.check log and report , check foward traffic
+7.create policy for dns, email,web traffic(hhp,hhtps)
+8. check antivurs settings and setup basic settings
+9.setup dns,check application control
+10.backup and factory reset and restore the backups
