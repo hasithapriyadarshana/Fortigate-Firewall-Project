@@ -1,163 +1,86 @@
-# FortiGate Firewall Configuration Lab
+# FortiGate Firewall Configuration Project — Completed
 
-## 1. Lab overview
+**Project Status:** Completed
 
-This lab uses a FortiGate firewall connected to a cloud network, two routers, two switches, and four VPCS end devices. The exercises cover basic FortiGate administration, interface and DHCP configuration, routing, IPv4 firewall policies, security profiles, monitoring, logging, backup, and restore.
+## Project Overview
 
-## 2. Network topology
+This project demonstrates the configuration and administration of a FortiGate firewall using GNS3.
 
-![FortiGate lab network topology](Topology.png)
+The lab topology includes a FortiGate firewall connected to a Cloud network, two routers, two switches, and four VPCS end devices.
 
-### Devices and connections
+## Lab Environment
 
-| Device | Interface | Connected to |
-|---|---|---|
-| Cloud | `eth0` | FortiGate `port1` |
-| FortiGate | `port1` | Cloud |
-| FortiGate | `port2` | Router R1 `f0/0` |
-| FortiGate | `port3` | Router R2 `f0/0` |
-| Router R1 | `f0/1` | Switch1 `e0` |
-| Switch1 | `e1` | PC1 `e0` |
-| Switch1 | `e2` | PC2 `e0` |
-| Router R2 | `f0/1` | Switch2 `e0` |
-| Switch2 | `e1` | PC3 `e0` |
-| Switch2 | `e2` | PC4 `e0` |
+- **Firewall:** FortiGate-VM
+- **FortiOS Version:** 7.0.9
+- **Network Simulator:** GNS3
+- **Virtualization Platform:** Oracle VirtualBox
+- **Routers:** R1 and R2
+- **Switches:** Switch1 and Switch2
+- **End Devices:** PC1, PC2, PC3, and PC4
 
-> **Addressing note:** The topology image identifies the devices and links but does not specify IP addresses, subnet masks, DHCP pools, gateways, or routing next hops. Plan and document an IP addressing scheme before configuring the lab. Use that same plan consistently on the FortiGate, routers, and VPCS hosts.
+## Completed Project Tasks
 
-## 3. Lab objectives and tasks
+### 1. Basic System Configuration
+- Changed the firewall hostname.
+- Configured the time zone.
+- Explored the available GUI theme colours.
+- Configured the administrator idle-timeout setting.
 
-Complete the following tasks in order. Record the configuration values you use and verify each stage before moving on.
+### 2. Network Interface and DHCP Configuration
+- Configured the FortiGate network interfaces.
+- Assigned IP addressing to the required interfaces.
+- Set up DHCP services.
 
-### Task 1 — Basic FortiGate settings
+### 3. Static Routing
+- Configured static routes.
+- Verified routing and network reachability.
 
-- [ ] Change the firewall hostname.
-- [ ] Set the correct time zone and verify the system date and time.
-- [ ] Explore the available GUI theme colours and select a preferred theme.
-- [ ] Configure the administrative idle-timeout value.
-- [ ] Verify that the new settings are applied.
+### 4. IPv4 Firewall Policies
+- Created and configured IPv4 firewall policies.
+- Configured traffic permissions.
+- Configured NAT where required by the lab design.
 
-### Task 2 — Configure interfaces and DHCP
+### 5. FortiView
+- Explored FortiView.
+- Monitored network traffic and sessions.
 
-- [ ] Configure the FortiGate interfaces used in the topology:
-  - `port1` — connection to the Cloud.
-  - `port2` — connection to Router R1.
-  - `port3` — connection to Router R2.
-- [ ] Assign IP addresses and subnet masks according to the lab IP plan.
-- [ ] Configure administrative access on the interfaces where required.
-- [ ] Configure DHCP service on the appropriate interface or interfaces, using the planned address pools, default gateway, and DNS settings.
-- [ ] Verify interface status and confirm that the relevant clients receive the expected DHCP settings.
+### 6. Logs and Reports
+- Reviewed firewall logs and reports.
+- Checked forward traffic logs.
+- Analysed traffic and policy information.
 
-### Task 3 — Configure static routes
+### 7. Service-Based Firewall Policies
+Created and tested firewall policies for:
+- DNS traffic.
+- Email traffic.
+- HTTP traffic.
+- HTTPS traffic.
 
-- [ ] Identify the networks behind Router R1 and Router R2.
-- [ ] Configure the required static routes on the FortiGate using the correct next-hop addresses and outgoing interfaces.
-- [ ] Add or verify return routes on the routers if the lab design requires them.
-- [ ] Check the routing table and test connectivity between the relevant networks.
+### 8. Antivirus
+- Reviewed antivirus settings.
+- Configured basic antivirus settings where supported.
 
-### Task 4 — Configure IPv4 firewall policies
+### 9. DNS and Application Control
+- Reviewed and configured DNS settings.
+- Checked application-control features.
+- Configured basic application-control settings where supported.
 
-- [ ] Create IPv4 firewall policies for the traffic that should be allowed between the connected networks.
-- [ ] Select the correct incoming and outgoing interfaces.
-- [ ] Configure source and destination addresses, services, and schedule.
-- [ ] Enable NAT only where it is required by the lab design.
-- [ ] Place policies in the correct order and enable logging for the traffic you want to inspect.
-- [ ] Test permitted traffic and confirm that traffic not allowed by policy is blocked.
+### 10. Backup, Factory Reset, and Restore
+- Exported a FortiGate configuration backup.
+- Performed a factory reset.
+- Restored the configuration from the saved backup.
+- Verified the restored configuration.
 
-### Task 5 — Explore FortiView
+## Project Deliverables
 
-- [ ] Open FortiView in the FortiGate GUI.
-- [ ] Review the available traffic, source, destination, application, and session views.
-- [ ] Generate test traffic from the PCs and observe the resulting entries.
-- [ ] Use the views to identify which devices and applications are using the network.
+- GNS3 network topology.
+- GNS3 project file.
+- FortiGate configuration backup.
+- Project documentation.
+- Configuration screenshots.
 
-### Task 6 — Review logs and reports
+## Conclusion
 
-- [ ] Open the Log & Report section.
-- [ ] Review forward traffic logs.
-- [ ] Generate traffic from the PCs and confirm that the expected sessions appear in the logs.
-- [ ] Check the source, destination, service, action, and policy information.
-- [ ] Review available reports and note what information they provide.
+This project provided practical experience with FortiGate firewall administration, network interface configuration, DHCP, static routing, IPv4 firewall policies, traffic monitoring, logging, security profiles, and configuration backup and restoration.
 
-### Task 7 — Create service-specific firewall policies
-
-Create and test policies for the following traffic types:
-
-- [ ] DNS traffic.
-- [ ] Email traffic, using the email services required for the lab.
-- [ ] Web traffic using HTTP and HTTPS.
-
-For each policy:
-
-- Select the correct source and destination interfaces and addresses.
-- Choose the required service objects.
-- Configure NAT if required by the network design.
-- Enable appropriate traffic logging.
-- Test the service from a PC and verify the result in the forward traffic log.
-
-### Task 8 — Review and configure antivirus
-
-- [ ] Open the antivirus security profile settings.
-- [ ] Review the available antivirus inspection options.
-- [ ] Configure basic antivirus settings for the lab.
-- [ ] Apply the profile to the relevant firewall policy.
-- [ ] Verify the profile is attached to the intended policy.
-
-> Antivirus inspection and signature updates depend on the FortiGate VM version, licensing, and connectivity. Record any feature or update limitations encountered in the lab.
-
-### Task 9 — Configure DNS and review application control
-
-- [ ] Review and configure the FortiGate DNS settings required by the lab.
-- [ ] Verify that clients can resolve domain names using the configured DNS service.
-- [ ] Open the Application Control settings.
-- [ ] Review the available application categories and controls.
-- [ ] Create or adjust a basic application-control profile.
-- [ ] Apply it to the relevant firewall policy and inspect the resulting traffic or security logs.
-
-### Task 10 — Back up, factory reset, and restore
-
-- [ ] Export and save a backup of the working FortiGate configuration.
-- [ ] Store the backup somewhere safe and identify the FortiGate version and configuration state it belongs to.
-- [ ] Confirm that the backup file is available before proceeding.
-- [ ] Perform a factory reset only when you are ready to erase the current configuration.
-- [ ] After the reset, access the FortiGate and restore the saved configuration backup.
-- [ ] Verify the hostname, interfaces, routes, policies, DHCP, and security settings after restoration.
-- [ ] Test connectivity again from the PCs.
-
-> **Warning:** A factory reset removes the active configuration. Do not reset the firewall until you have exported and safely stored a known-good backup. Make sure you understand how you will regain management access after the reset.
-
-## 4. Verification checklist
-
-Use this checklist at the end of the lab:
-
-- [ ] FortiGate hostname, time zone, theme, and idle timeout are configured.
-- [ ] `port1`, `port2`, and `port3` have the intended interface configuration.
-- [ ] DHCP clients receive the expected IP configuration.
-- [ ] Static routes are present and routing works in both directions where required.
-- [ ] IPv4 firewall policies allow the intended traffic.
-- [ ] DNS, email, HTTP, and HTTPS tests have been performed.
-- [ ] FortiView displays traffic generated during testing.
-- [ ] Forward traffic logs show the expected policy decisions.
-- [ ] Antivirus and application-control profiles are reviewed and applied where supported.
-- [ ] A configuration backup has been saved.
-- [ ] The backup restore has been tested and the restored configuration verified.
-
-## 5. Lab notes
-
-Record your actual values and test results here.
-
-| Item | Value / result |
-|---|---|
-| FortiGate hostname | |
-| FortiGate firmware version | |
-| `port1` IP / mode | |
-| `port2` IP / subnet | |
-| `port3` IP / subnet | |
-| R1 LAN network | |
-| R2 LAN network | |
-| DHCP pool(s) | |
-| Static route(s) | |
-| Firewall policy IDs / purpose | |
-| Backup file name and date | |
-| Restore test result | |
-
+**Project Status: Completed**
